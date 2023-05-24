@@ -1,0 +1,91 @@
+.about-pc {
+  padding-top: 113px;
+  padding-bottom: 156px;
+  background-image: url("../img/about-pc-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__image {
+    @include small-tablet {
+      margin: 0 auto;
+      max-width: 400px;
+    }
+  }
+
+  &__scene {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @include small-tablet {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.about-pc-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &__bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    img {
+      position: absolute;
+    }
+  }
+
+  &__leaf-left {
+    left: 0;
+    top: 0;
+    will-change: transform;
+  }
+
+  &__leaf-right {
+    right: 0;
+    top: 0;
+    will-change: transform;
+  }
+
+  &__clouds {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__wheel-big {
+    position: absolute;
+    right: 13%;
+    top: 0;
+    z-index: 8;
+    animation: rotating 6.5s linear infinite reverse;
+  }
+
+  &__wheel-small {
+    position: absolute;
+    right: 35%;
+    top: 20%;
+    z-index: 8;
+    animation: rotating 6.5s linear infinite reverse;
+  }
+
+  &__controller {
+    position: absolute;
+    top: 50%;
+    z-index: 11;
+    zoom: 0.96;
+    animation: flying 3s linear infinite;
+  }
+}

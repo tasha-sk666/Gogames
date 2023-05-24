@@ -1,0 +1,180 @@
+.price {
+  padding-top: 47px;
+  padding-bottom: 120px;
+  background-color: var(--beige-color);
+
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 85px;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(20px, 3vw, 40px);
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(15px, 3vw, 46px);
+    padding-top: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      border-radius: 25px;
+      width: 100%;
+      height: 100%;
+      background-color: var(--cinderella-color);
+    }
+
+    &--main {
+      &::before {
+        background: url("../img/union.png"), linear-gradient(180deg, #446381 0%, #826f8c 100%);
+        background-position: left bottom, center;
+        background-size: 50%, cover;
+        background-repeat: no-repeat;
+        transform: scaleY(1.1);
+
+        @include tablet {
+          transform: scale(1) !important;
+        }
+      }
+
+      &::after {
+        @include bg-cover;
+
+        content: "";
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 45px;
+        height: 45px;
+        background-image: url("../img/badge.png");
+      }
+
+      .price__name {
+        color: var(--light-color);
+      }
+
+      .price__tariff {
+        color: var(--light-color);
+      }
+
+      .price__tariff::before {
+        background-image: url("../img/list-arrow-light.png");
+      }
+    }
+
+    @include small-tablet {
+      padding: 20px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--bismark-color);
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__value {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--apricot-color);
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__valute {
+    font-size: 27px;
+  }
+
+  &__value-digit {
+    font-size: clamp(32px, 3.8vw, 50px);
+  }
+
+  &__tariff {
+    position: relative;
+    padding-left: 20px;
+    font-size: 18px;
+    color: var(--bismark-color);
+
+    &::before {
+      @include bg-cover;
+
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 13px;
+      height: 10px;
+      background-image: url("../img/list-arrow.png");
+      transform: translateY(-50%);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include small-tablet {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__link {
+    margin-top: 60px;
+    width: 100%;
+
+    @include small-tablet {
+      margin-top: 40px;
+    }
+  }
+
+  @include small-tablet {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}

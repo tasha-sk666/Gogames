@@ -1,0 +1,25 @@
+@import "mixins";
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Josefin", sans-serif;
+  --content-width: 1167px;
+  --container-offset: 50px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --bismark-color: #446381;
+  --apricot-color: #eb8382;
+  --rum-color: #826f8c;
+  --cinderella-color: #fbdacf;
+  --beige-color: #fee9dc;
+  --animation-primary: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+@include tablet {
+  :root {
+    --container-offset: 15px;
+  }
+}

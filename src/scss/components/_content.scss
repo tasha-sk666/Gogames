@@ -1,0 +1,33 @@
+.content {
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 36px;
+  }
+
+  &__subtitle-accent {
+    color: var(--bismark-color);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 34px;
+    font-size: 18px;
+    line-height: 162%;
+    color: var(--rum-color);
+  }
+
+  &__link {
+    min-width: 207px;
+
+    @include mobile {
+      display: flex;
+      margin: 0 auto;
+      max-width: 206px;
+    }
+  }
+}

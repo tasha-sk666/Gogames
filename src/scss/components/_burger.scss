@@ -1,0 +1,16 @@
+.burger {
+  @include burger;
+
+  display: none;
+
+  @include tablet {
+    position: relative;
+    z-index: 23;
+    display: block;
+    color: var(--rum-color);
+
+    @include hover {
+      color: var(--apricot-color);
+    }
+  }
+}

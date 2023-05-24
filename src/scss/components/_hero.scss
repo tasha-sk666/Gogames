@@ -1,0 +1,111 @@
+.hero {
+  @include bg-cover;
+
+  padding-top: 145px;
+  padding-bottom: 98px;
+  background-image: url("../img/hero-bg.jpg");
+
+  &__content {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 50%;
+    bottom: -30%;
+    width: 120px;
+    height: 120px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: rotating 10s linear infinite;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__image {
+    @include small-tablet {
+      margin: 0 auto;
+      max-width: 400px;
+    }
+  }
+
+  &__scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @include small-tablet {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+
+.hero-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &__hole {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    zoom: 0.84;
+  }
+
+  &__center {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+  }
+
+  &__boy {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+  }
+
+  &__joy {
+    position: absolute;
+    left: 5.2vw;
+    top: 3vh;
+    z-index: 2;
+  }
+
+  &__subimg-top {
+    position: absolute;
+    left: -7vw;
+    top: -20px;
+    z-index: 4;
+  }
+
+  &__subimg-bottom {
+    position: absolute;
+    right: -6vw;
+    bottom: -20px;
+    z-index: 4;
+  }
+}
+
+// .scene {
+//   position: relative;
+// }
+
+// .boy {
+//   position: absolute;
+//   bottom: 0;
+//   left: 50%;
+//   opacity: 0.3;
+//   transform: scale(0.4);
+//   // transform: translateY(200px);
+// }
