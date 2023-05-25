@@ -5,6 +5,10 @@
   padding-bottom: 98px;
   background-image: url("../img/hero-bg.jpg");
 
+  &__subtitle-accent {
+    display: inline-block;
+  }
+
   &__content {
     position: relative;
   }
